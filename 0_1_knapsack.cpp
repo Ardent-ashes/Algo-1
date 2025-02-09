@@ -10,7 +10,7 @@ void knapsack(int W,vector<int>& wt, vector<int>& val){
                 dp[i][w]=0;
             }
             else if(wt[i-1]<=w){
-                dp[i][w] = max(val[i] + dp[i - 1][w - wt[i - 1]], dp[i - 1][w]);
+                dp[i][w] = max(val[i-1] + dp[i - 1][w - wt[i - 1]], dp[i - 1][w]);
             }
             else{
                 dp[i][w]=dp[i-1][w];
